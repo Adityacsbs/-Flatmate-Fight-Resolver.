@@ -68,11 +68,8 @@ http://localhost:8080/swagger-ui/index.html
    - Set the **Start Command:** `mvn spring-boot:run`
    - Choose **Free Plan** and deploy
 
-## 📌 Next Steps
-- 📌 **Test APIs on Postman**
-- 📌 **Fix bugs & improve performance**
-- 📌 **Record a demo video**
+
 
 ---
-**Made with ❤️ by Aditya & Team** 🚀
+**Made with ❤️ by Aditya** 🚀
 
