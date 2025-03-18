@@ -1,15 +1,14 @@
-# Use an official OpenJDK runtime as a parent image
-FROM maven:3.9-eclipse-temurin-21-alpine
+# Use a base image with Java 21
+FROM openjdk:21-jdk-slim
 
-# Set the working directory in the container
+# Create a directory for the app
 WORKDIR /app
 
-# Copy the jar file into the container at /app
-COPY target/your-spring-boot-app.jar /app/app.jar
+# Copy the built JAR file into the container
+COPY target/flatmate-fight-resolver-0.0.1-SNAPSHOT.jar /app/app.jar
 
-# Make port 8080 available to the world outside this container
+# Expose port 8080
 EXPOSE 8080
 
-# Run the jar file
-ENTRYPOINT ["java", "-jar", "app.jar"]
- 
+# Run the application
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
